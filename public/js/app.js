@@ -37,7 +37,7 @@ new Vue({
   computed: {
     totp: function () {
       return new OTPAuth.TOTP({
-        algorithm: 'SHA1',
+        algorithm: 'SHA512',
         digits: this.digits,
         period: this.period,
         secret: OTPAuth.Secret.fromB32(stripSpaces(this.secret_key)),
